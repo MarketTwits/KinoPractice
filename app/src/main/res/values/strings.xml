@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">KINO Practice</string>
+    <string name="search_theatre">Найти кинотеатр</string>
+    <string name="start">Старт</string>
+    <string name="search_film">Найти фильм</string>
+    <string name="new_theatre">Новый кинотеатр</string>
+    <string name="new_film">Новый фильм</string>
+    <string name="Search_End">Поиск завершен</string>
+    <string name="Search_Start">Начало поиска</string>
+</resources>
