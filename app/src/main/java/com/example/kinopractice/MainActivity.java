@@ -8,6 +8,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.example.kinopractice.presentation.search_films.SearchFilmsActivity;
+import com.example.kinopractice.presentation.search_theters.SearchTheatersActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -27,9 +30,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent =null;
         switch (item.getItemId())
         {
-            case R.id.m1: intent = new Intent(this, theatre.class);
+            case R.id.m1: intent = new Intent(this, SearchTheatersActivity.class);
                 break;
-            case R.id.m2: intent = new Intent(this, films.class);
+            case R.id.m2: intent = new Intent(this, SearchFilmsActivity.class);
                 break;
             case R.id.m3: intent = new Intent(this, newtheatre.class);
                 break;
@@ -44,12 +47,12 @@ public class MainActivity extends AppCompatActivity {
     }
     public void onClickTheater(View view){
         Intent intent;
-        intent = new Intent(this, theatre.class);
+        intent = new Intent(this, SearchTheatersActivity.class);
         startActivity(intent);
     }
     public void onClickFilms(View view){
         Intent intent;
-        intent = new Intent(this, films.class);
+        intent = new Intent(this, SearchFilmsActivity.class);
         startActivity(intent);
     }
     public void onClickNewTheater(View view){
