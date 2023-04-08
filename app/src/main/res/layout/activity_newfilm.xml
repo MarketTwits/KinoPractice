@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/bacroundfade"
     android:orientation="vertical">
     <EditText
@@ -37,9 +37,10 @@
         android:textColor="@color/white"
         android:text="">
     </TextView>
-    <ListView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/lvMain"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:layout_weight="1">
-    </ListView></LinearLayout>
+    </androidx.recyclerview.widget.RecyclerView></LinearLayout>

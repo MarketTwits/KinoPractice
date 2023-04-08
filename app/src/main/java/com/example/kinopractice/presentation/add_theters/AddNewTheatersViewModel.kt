@@ -1,4 +1,4 @@
-package com.example.kinopractice.presentation.search_theters
+package com.example.kinopractice.presentation.add_theters
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -11,28 +11,25 @@ import com.example.kinopractice.domain.BaseRepository
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class SearchTheatersViewModel(
+class AddNewTheatersViewModel(
     private val baseRepository: BaseRepository,
     private val dispatcher: DispatchersWrapper
 ) : ViewModel() {
-    private val _searchTheaters = MutableLiveData<List<TheatersCloudItem>>()
-     val searchTheaters : LiveData<List<TheatersCloudItem>> = _searchTheaters
+    private val _message = MutableLiveData<String>()
+     val message : LiveData<String> = _message
 
-    private val _errorMessage = MutableLiveData<String>()
-    val errorMessage : LiveData<String> = _errorMessage
 
-    fun getTheaters(theaters : String){
+    fun addTheater(theatersName : String, theatersAddress : String){
         viewModelScope.launch(dispatcher.io()) {
-            val data = baseRepository.getTheaters(theaters)
+            val data = baseRepository.addNewTheater(theatersName, theatersAddress)
             if(data.isSuccess()){
                 withContext(dispatcher.ui()){
-                    data as NetworkResult.Success<List<TheatersCloudItem>>
-                    _searchTheaters.postValue(data.getData())
-                    _errorMessage.postValue("")
+                    data as NetworkResult.Success<String>
+                    _message.postValue(data.getData())
                 }
             }else{
                 withContext(dispatcher.ui()){
-                    _errorMessage.postValue(data.errorMessage())
+                    _message.postValue(data.errorMessage())
                 }
             }
         }

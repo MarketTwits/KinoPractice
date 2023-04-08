@@ -1,6 +1,10 @@
 package com.example.kinopractice.data.cloud_model.search_theathers
 
+import com.google.gson.annotations.SerializedName
+
 data class TheatersCloudItem(
-    val address: String,
-    val name: String
+    @SerializedName("address")
+    val theatersAddress: String,
+    @SerializedName("name")
+    val theatersName: String
 )
