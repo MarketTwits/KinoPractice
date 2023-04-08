@@ -8,6 +8,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.example.kinopractice.presentation.add_theters.AddNewTheatersActivity;
+import com.example.kinopractice.presentation.add_theters.AddNewTheatersViewModel;
 import com.example.kinopractice.presentation.search_films.SearchFilmsActivity;
 import com.example.kinopractice.presentation.search_theters.SearchTheatersActivity;
 
@@ -34,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.m2: intent = new Intent(this, SearchFilmsActivity.class);
                 break;
-            case R.id.m3: intent = new Intent(this, newtheatre.class);
+            case R.id.m3: intent = new Intent(this, AddNewTheatersActivity.class);
                 break;
             case R.id.m4: intent = new Intent(this, newfilm.class);
                 break;
@@ -57,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void onClickNewTheater(View view){
         Intent intent;
-        intent = new Intent(this, newtheatre.class);
+        intent = new Intent(this, AddNewTheatersActivity.class);
         startActivity(intent);
     }
     public void onClickNewFilms(View view){

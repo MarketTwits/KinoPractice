@@ -4,9 +4,9 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import com.example.kinopractice.KinoApp
-import com.example.kinopractice.data.cloud_model.search_film.FilmCloudItem
 import com.example.kinopractice.data.cloud_model.search_theathers.TheatersCloudItem
 import com.example.kinopractice.databinding.ActivityFilmsBinding
+import com.example.kinopractice.presentation.add_theters.AddNewTheatersViewModel
 import com.example.kinopractice.presentation.search_theters.adapter.TheatersAdapter
 
 

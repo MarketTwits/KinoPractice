@@ -21,7 +21,7 @@ interface ApiService {
         @Field("id") id: Int = 1,
         @Field("name") name: String,
         @Field("address") address: String
-    ) : ResponseBody
+    ) : String
 
     @POST("")
     suspend fun addNewFilm(

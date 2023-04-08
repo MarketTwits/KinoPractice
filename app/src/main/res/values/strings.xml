@@ -7,4 +7,9 @@
     <string name="new_film">Новый фильм</string>
     <string name="Search_End">Поиск завершен</string>
     <string name="Search_Start">Начало поиска</string>
+    <string name="film_not_found">Film not found</string>
+    <string name="cant_add_film">Add film failed exception : </string>
+    <string name="theaters_not_found">Theaters not found</string>
+    <string name="theater_added">Theater added successfully</string>
+    <string name="exception">exception</string>
 </resources>

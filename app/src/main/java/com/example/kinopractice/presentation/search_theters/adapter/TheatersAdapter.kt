@@ -19,8 +19,8 @@ class TheatersAdapter(var lines: List<TheatersCloudItem>) :
     override fun onBindViewHolder(holder: TheatersViewHolder, position: Int) {
         val p = lines[position]
         val binding = holder.binding
-        binding.tvTheaterAddress.text = p.address
-        binding.tvTheaterName.text = p.name
+        binding.tvTheaterAddress.text = p.theatersAddress
+        binding.tvTheaterName.text = p.theatersName
     }
     class TheatersViewHolder(val binding : ItemTheatersBinding) : RecyclerView.ViewHolder(binding.root)
 }
