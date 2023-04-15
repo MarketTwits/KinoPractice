@@ -1,5 +1,6 @@
 package com.example.kinopractice.data.retrofit
 
+import com.example.kinopractice.data.cloud_model.add_film.TheaterWithIDCloud
 import com.example.kinopractice.data.cloud_model.search_film.FilmCloud
 import com.example.kinopractice.data.cloud_model.search_theathers.TheatersCloud
 import okhttp3.ResponseBody
@@ -15,6 +16,9 @@ interface ApiService {
     suspend fun getTheaters(@Query(QUERY_PARAM_NAME) name: String
     ): Response<TheatersCloud>
 
+    @GET("kino/?id=3")
+    suspend fun getTheatersWithId(): Response<TheaterWithIDCloud>
+
     @FormUrlEncoded
     @POST("kino")
     suspend fun addNewTheater(
@@ -23,10 +27,21 @@ interface ApiService {
         @Field("address") address: String
     ) : String
 
-    @POST("")
+    @FormUrlEncoded
+    @POST("kino")
     suspend fun addNewFilm(
+        @Field("id") id: Int = 2,
+        @Field("name") name: String,
+    ) : String
 
-    )
+
+    @FormUrlEncoded
+    @POST("kino")
+    suspend fun addTheaterIdFilmId(
+        @Field("id") id: Int = 3,
+        @Field("theatreID") theaterId: String,
+        @Field("filmID") filmId: String,
+    ) : String
 
     companion object{
         private const val QUERY_PARAM_NAME = "name"

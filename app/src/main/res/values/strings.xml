@@ -11,5 +11,7 @@
     <string name="cant_add_film">Add film failed exception : </string>
     <string name="theaters_not_found">Theaters not found</string>
     <string name="theater_added">Theater added successfully</string>
+    <string name="film_added">Film added successfully</string>
     <string name="exception">exception</string>
+    <string name="fill_all_fields">Fill in all fields longer than 3 characters</string>
 </resources>

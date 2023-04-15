@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bacroundfade"
-    tools:context=".MainActivity">
+    tools:context=".presentation.views.main.MainActivity">
 
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView"
@@ -366,13 +366,13 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/imSearchFilm"
                 android:layout_width="160dp"
                 android:layout_height="40dp"
                 android:layout_margin="20dp"
                 app:cardBackgroundColor="@color/light_pink"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="10dp"
-                android:onClick="onClickFilms"
                 >
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -400,14 +400,14 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/imAddTheater"
                 android:layout_width="217dp"
                 android:layout_height="42dp"
                 android:layout_margin="20dp"
                 app:cardBackgroundColor="@color/light_blue"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="10dp"
-                android:onClick="onClickNewTheater">
-
+              >
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="227dp"
                     android:layout_height="match_parent"
@@ -433,13 +433,14 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/imAddFilm"
                 android:layout_width="192dp"
                 android:layout_height="38dp"
                 android:layout_margin="20dp"
                 app:cardBackgroundColor="@color/light_green"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="10dp"
-                android:onClick="onClickNewFilms">
+               >
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="181dp"
@@ -467,13 +468,14 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/imGetTheater"
                 android:layout_width="168dp"
                 android:layout_height="40dp"
                 android:layout_margin="20dp"
                 app:cardBackgroundColor="@color/light_arrow"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="10dp"
-                android:onClick="onClickTheater">
+               >
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
