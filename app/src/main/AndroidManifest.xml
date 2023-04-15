@@ -12,31 +12,29 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.KinoPractice"
         tools:targetApi="31"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".presentation.add_theters.AddNewTheatersActivity"
+            android:name=".presentation.views.add_theters.AddNewTheatersActivity"
             android:exported="false"
-            android:value=".MainActivity"
             />
         <activity
-            android:name=".presentation.search_theters.SearchTheatersActivity"
+            android:name=".presentation.views.search_theters.SearchTheatersActivity"
             android:exported="false" />
         <activity
-            android:name=".newfilm"
+            android:name=".presentation.views.add_film.AddFilmActivity"
             android:exported="false" />
         <activity
-            android:name=".presentation.search_films.SearchFilmsActivity"
+            android:name=".presentation.views.search_films.SearchFilmsActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".presentation.views.main.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

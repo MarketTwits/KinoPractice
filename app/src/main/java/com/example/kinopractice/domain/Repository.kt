@@ -6,5 +6,8 @@ interface Repository {
     suspend fun addNewTheater(theatersName: String,
                               theatersAddress : String
     ) : NetworkResult
-    suspend fun addNewFilm()
+    suspend fun addTheaterIDFilmId(theaterId : String, filmId : String
+    ) : NetworkResult
+    suspend fun addNewFilm(filmsName: String) : NetworkResult
+    suspend fun getTheatersWithId() : NetworkResult
 }

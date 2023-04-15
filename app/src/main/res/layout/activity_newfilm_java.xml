@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/bacroundfade"
     android:orientation="vertical">
     <EditText
-        android:id="@+id/edFilmName"
+        android:id="@+id/editTextTextPersonName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
@@ -19,11 +19,11 @@
         android:text="" />
 
     <Button
-        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:backgroundTint="@color/buttons"
+        android:onClick="onclick"
         android:text="@string/start"></Button>
     <!--><ProgressBar
         android:layout_width="wrap_content"
@@ -34,14 +34,12 @@
         android:id="@+id/tvInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
         android:textColor="@color/white"
         android:text="">
     </TextView>
-    <androidx.recyclerview.widget.RecyclerView
+    <ListView
         android:id="@+id/lvMain"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:layout_weight="1">
-    </androidx.recyclerview.widget.RecyclerView></LinearLayout>
+    </ListView></LinearLayout>
